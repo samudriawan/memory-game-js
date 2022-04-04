@@ -1,0 +1,49 @@
+@use '../abstracts' as *;
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $primary-color-light;
+}
+.wrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 90px);
+	justify-content: center;
+}
+
+.game-over {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: hsla(0, 0, 50%, 0.6);
+	color: $secondary-color;
+	z-index: 2;
+
+	&__msg {
+		padding: 2.5em 2em;
+		background-color: $primary-color-light;
+
+		button {
+			border: none;
+			outline: none;
+			padding: 0.5em 2em;
+			font-size: 1.3rem;
+			background-color: $accent-color-3;
+			color: $accent-color-magenta;
+			&:hover {
+				color: $accent-color-3;
+				background-color: $accent-color-magenta;
+			}
+		}
+	}
+}
+
+@include media(md) {
+	body {
+		max-width: 1200px;
+	}
+	.wrapper {
+		grid-template-columns: repeat(4, 100px);
+	}
+}

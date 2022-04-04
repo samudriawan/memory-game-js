@@ -1,0 +1,9 @@
+// abstracts
+@use 'abstracts';
+// base
+@use 'base';
+// main layout
+@use 'layout/main-layout';
+
+// sass watch
+// sass -w src/sass/style.scss:src/css/style.css

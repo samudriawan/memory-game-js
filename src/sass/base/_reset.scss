@@ -1,0 +1,71 @@
+// use box-sizing model
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+// remove margin
+*,
+p,
+h1,
+h2,
+h3,
+h4,
+figure {
+	margin: 0;
+}
+// allow percentage-based heights in the application
+html,
+body {
+	height: 100%;
+}
+// add line-height
+body {
+	line-height: 1.5;
+	text-rendering: optimizeSpeed;
+}
+// remove in-built form typography styles (enabled if you don't use normalize css)
+// input,
+// textarea,
+// select,
+// button {
+// 	font: inherit;
+// }
+// improve media defaults
+img,
+svg,
+picture,
+video {
+	display: block;
+	max-width: 100%;
+}
+// word wrapping
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+	hyphens: auto;
+}
+// remove default list-style
+ul,
+ol {
+	list-style: none;
+}
+// disableb animation for browser setting prefers-reduced-motion
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-delay: -1ms !important;
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0s !important;
+		transition-delay: 0s !important;
+	}
+}

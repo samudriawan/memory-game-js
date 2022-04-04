@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use 'variables';
+
+// flexbox
+@mixin flex($justify: flex-start, $direction: row, $wrap: nowrap) {
+	display: flex;
+	align-items: center;
+	justify-content: $justify;
+	flex-flow: $direction $wrap;
+}
+
+// grid
+@mixin grid-auto-repeat($grid-col: 1fr, $grid-row: 1fr) {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, $grid-col);
+	grid-template-rows: repeat(auto-fill, $grid-row);
+	// gap: $gap;
+	align-items: center;
+}
+
+// transition
+@mixin transition($property: all, $timing: ease-in-out) {
+	transition: $property 250ms $timing;
+}
+
+// media query
+@mixin media($breakpoint: md) {
+	$bp: map.get(variables.$breakpoints, $breakpoint);
+	@media (min-width: $bp) {
+		@content;
+	}
+}
